@@ -36,7 +36,7 @@
 	- 升级Chocolatey命令：`choco upgrade chocolatey`
 
 4. git安装  **Git Bash用于各种命令写入** 
-<br/>（*Github安装<可暂时不安装>，安装教程：[README.md](https://github.com/CaiNiaoManNonglqzhb/Summary-JoyceLiu/blob/master/Tutorials%EF%BC%9A%E6%8A%8A%E9%9F%B3%E9%A2%91%E5%85%88%E7%BF%BB%E8%AF%91%E6%88%90%E8%8B%B1%E6%96%87%E5%AD%97%E5%B9%95%EF%BC%8C%E5%86%8D%E7%BF%BB%E8%AF%91%E6%88%90%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95/set_up_Git_and_GitHub.md)*）
+<br/>（*Github安装<可暂时不安装>，安装教程：[Tutorials：在Windows上搭建git和Github环境](https://github.com/JoyceLiu-LQ/Summary/tree/master/Tutorials%EF%BC%9A%E5%9C%A8Windows%E4%B8%8A%E6%90%AD%E5%BB%BAgit%E5%92%8CGithub%E7%8E%AF%E5%A2%83)*）
 
 	- 打开管理员权限PowerShell<br/>
 	- 输入`choco install git -y`<br/>

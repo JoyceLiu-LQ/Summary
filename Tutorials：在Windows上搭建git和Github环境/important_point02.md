@@ -77,4 +77,43 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
     - 方法二：  
     `set-ExecutionPolicy RemoteSigned Import-Module .\xxxxx.ps1 [导入模块]`
 
+11. iex 命令是 Invoke-Expression 的别名Alias。
+    - 中文：调用表达式
+    - 句法：  
+        `Invoke-Expression [-command] <string> [<CommonParameters>]`  
+        - [-command]  string：一个有效的PowerShell表达式的文字字符串（或包含字符串的变量）。  
+        - [ CommonParameters ] ：-Verbose，-Debug，-ErrorAction，-ErrorVariable，-WarningAction，-WarningVariable，-OutBuffer -OutVariable。
+        - Invoke-Expression存在问题：
+            - 它使获得正确的引用变得复杂
+            - 它使维护脚本更难
+            - 它比替代品慢
+            - 也许最糟糕的是 - 它打开了一个代码注入攻击的脚本
+        - 如果您正在运行某个命令并且命令路径中包含空格，那么您需要命令调用运算符'＆'（请参阅help about_operators，查找“call operator”）。
+        - 使用底线：对于某些场景，例如在运行时创建新脚本，Invoke-Expression是一个功能强大且有用的命令。
+        
+12. New-Object 命令是PowerShell中的cmdlet 命令。
+    - New-Object中文：新建对象
+    - New-Object 创建一个.NET Framework或COM对象的实例。
+    - 语法1：创建一个.NET Framework实例
+        ```
+        New-Object
+        [-TypeName] <String>
+        [[-ArgumentList] <Object[]>]
+        [-Property <IDictionary>]
+        [<CommonParameters>]
+        ```
+    - 语法2：创建一个COM对象的实例
+        ```
+        New-Object
+        [-ComObject] <String>
+        [-Strict]   
+        [-Property <IDictionary>]
+        [<CommonParameters>]
+        ```
+    - New-Object Net.WebClient是创建一个.NET Framework实例，全写是New-Object System.Net.WebClient
+    - 
+    
+13. cmdlet命令
+    - （发音为“command-let”），是Windows PowerShell环境中使用的轻量级命令。它执行单个功能。
+    - 
     
